@@ -1,0 +1,17 @@
+$ mysql --user=root -p
+
+mysql> SHOW DATABASE;
+
+mysql> CREATE DATABASE my_app;
+
+mysql> USE my_app;
+
+mysql> CREATE TABLE users(uid INT(11) AUTO_INCREMENT PRIMARY KEY,
+                          username VARCHAR(20),
+                          password VARCHAR(100),
+                          email VARCHAR(100));
+
+mysql> SHOW TABLES;
+
+mysql> QUIT
+

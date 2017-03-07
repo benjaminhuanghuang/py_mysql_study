@@ -1,0 +1,10 @@
+version: '2'
+services:
+  mysql:
+    image: mysql
+    ports:
+      - "3308:3306"  # map 3308 on host to 3306 on VM
+    environment:
+      MYSQL_ROOT_PASSWORD: ben123
+
+
