@@ -2,8 +2,9 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
+from models import initialize_sql
+
 from models.user import User
-from models.book import Book
 
 # connect to database
 # 'database type+db driver://username:password@server_address:port/db_name'
@@ -11,6 +12,7 @@ from models.book import Book
 # echo 是为了方便 控制台 logging 输出一些sql信息，默认是False
 engine = create_engine("mysql+pymysql://root:ben123@127.0.0.1:3308/ben_test_db?charset=utf8", encoding="utf-8",
                        echo=True)
+initialize_sql(engine)
 
 DBSession = sessionmaker(bind=engine)
 ses = DBSession()

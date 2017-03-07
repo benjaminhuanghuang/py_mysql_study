@@ -1,9 +1,7 @@
 from sqlalchemy import Column, String
-from sqlalchemy.ext.declarative import declarative_base
+from models import Base
 
-Base = declarative_base()
-
-class User(Base):
+class School(Base):
     __tablename__ = 'school'
 
     id = Column(String(20), primary_key=True)

@@ -1,10 +1,6 @@
-from sqlalchemy import Column, String
-from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
-
-from book import Book
-
-Base = declarative_base()
+from sqlalchemy import Column, String, ForeignKey
+from models import Base
 
 class User(Base):
     __tablename__ = 'user'
